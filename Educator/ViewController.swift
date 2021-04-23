@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     @IBOutlet var DateDropDown: UIView!
     @IBOutlet var segmentControl: UISegmentedControl!
     @IBOutlet var tableView: UITableView!
-    
+    @IBOutlet var classLabel: UILabel!
     
     // Fields
     var dataSource = [Home]()
@@ -39,6 +39,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        classLabel.text = "Select"
         insertData()
         self.DateDropDown.isHidden = true
         setupGesture()
@@ -55,49 +57,60 @@ class ViewController: UIViewController {
         // color of other options
         segmentControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
         
+        
+        
     }
 
     @IBAction func switchSegment(_ sender: UISegmentedControl) {
         if segmentControl.selectedSegmentIndex == 0 {
-            timetableDataSource = [Home]()
-            for i in 0..<dataSource.count{
-                if dataSource[i].day == "MON"{
-                    timetableDataSource.append(Home(name: dataSource[i].name, time: dataSource[i].time, location: dataSource[i].location, teacherName: dataSource[i].teacherName, classCode: dataSource[i].classCode, day: dataSource[i].day))
-                    tableView.reloadData()
+            for i in 0..<dataSourceClass.count {
+                if classLabel.text == dataSourceClass[i] {
+                    timetableDataSource = [Home]()
+                    for i in 0..<dataSource.count{
+                        if dataSource[i].day == "MON" && dataSource[i].classCode == classLabel.text{
+                            timetableDataSource.append(Home(name: dataSource[i].name, time: dataSource[i].time, location: dataSource[i].location, teacherName: dataSource[i].teacherName, classCode: dataSource[i].classCode, day: dataSource[i].day))
+                            tableView.reloadData()
+                        }
+                    }
                 }
             }
         }else if segmentControl.selectedSegmentIndex == 1 {
+            
             timetableDataSource = [Home]()
             for i in 0..<dataSource.count{
-                if dataSource[i].day == "TUE"{
+                if dataSource[i].day == "TUE" && dataSource[i].classCode == classLabel.text{
                     timetableDataSource.append(Home(name: dataSource[i].name, time: dataSource[i].time, location: dataSource[i].location, teacherName: dataSource[i].teacherName, classCode: dataSource[i].classCode, day: dataSource[i].day))
                     tableView.reloadData()
                 }
             }
+            tableView.reloadData()
         }else if segmentControl.selectedSegmentIndex == 2 {
             timetableDataSource = [Home]()
             for i in 0..<dataSource.count{
-                if dataSource[i].day == "WED"{
+                if dataSource[i].day == "WED" && dataSource[i].classCode == classLabel.text{
                     timetableDataSource.append(Home(name: dataSource[i].name, time: dataSource[i].time, location: dataSource[i].location, teacherName: dataSource[i].teacherName, classCode: dataSource[i].classCode, day: dataSource[i].day))
                     tableView.reloadData()
                 }
             }
+            tableView.reloadData()
         }else if segmentControl.selectedSegmentIndex == 3 {
             timetableDataSource = [Home]()
             for i in 0..<dataSource.count{
-                if dataSource[i].day == "THU"{
+                if dataSource[i].day == "THU" && dataSource[i].classCode == classLabel.text{
                     timetableDataSource.append(Home(name: dataSource[i].name, time: dataSource[i].time, location: dataSource[i].location, teacherName: dataSource[i].teacherName, classCode: dataSource[i].classCode, day: dataSource[i].day))
                     tableView.reloadData()
                 }
             }
+            tableView.reloadData()
         }else if segmentControl.selectedSegmentIndex == 4 {
             timetableDataSource = [Home]()
             for i in 0..<dataSource.count{
-                if dataSource[i].day == "FRI"{
+                if dataSource[i].day == "FRI" && dataSource[i].classCode == classLabel.text{
                     timetableDataSource.append(Home(name: dataSource[i].name, time: dataSource[i].time, location: dataSource[i].location, teacherName: dataSource[i].teacherName, classCode: dataSource[i].classCode, day: dataSource[i].day))
                     tableView.reloadData()
                 }
             }
+            tableView.reloadData()
         }
     }
     
@@ -120,7 +133,16 @@ class ViewController: UIViewController {
         dropDown.show()
         dropDown.selectionAction = { [weak self] (index: Int, item: String) in
             guard let _ = self else { return }
-            print(item)
+            self?.classLabel.text = item
+            self?.timetableDataSource = [Home]()
+            for i in 0..<(self?.dataSource.count)!{
+                if self?.dataSource[i].day == "MON" && self?.dataSource[i].classCode == self?.classLabel.text{
+                    self?.timetableDataSource.append(Home(name: self?.dataSource[i].name ?? "", time: self?.dataSource[i].time ?? "", location: self?.dataSource[i].location ?? "", teacherName: self?.dataSource[i].teacherName ?? "", classCode: self?.dataSource[i].classCode ?? "", day: self?.dataSource[i].day ?? ""))
+                    self?.tableView.reloadData()
+                }
+            }
+            self?.segmentControl.selectedSegmentIndex = 0
+           
         }
     }
     
@@ -140,7 +162,18 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource {
     
     // How many items are in array
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return timetableDataSource.count
+        if self.timetableDataSource.count == 0{
+            let emptyLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height))
+            emptyLabel.text = "Select Class"
+            emptyLabel.textAlignment = NSTextAlignment.center
+            emptyLabel.textColor = UIColor.white
+            self.tableView.backgroundView = emptyLabel
+            self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+            return 0
+        }else {
+            return timetableDataSource.count
+        }
+        
     }
     
     
@@ -162,6 +195,8 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource {
         
         return cell
     }
+    
+  
     
 }
 

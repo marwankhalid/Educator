@@ -21,6 +21,7 @@ extension ViewController{
         dataSource.append(Home(name: "CT037-3-2-NWS-LAB-1 (Online)", time: "2:00 PM - 4:00 PM", location: "Cisco Lab | APU CAMPUS", teacherName: "NORIS BINTI ISMAIL", classCode: "UC2F2008IT(IOT)", day: "THU"))
         dataSource.append(Home(name: "CT120-3-2-LPAN-L-1 (Online)", time: "4:15 AM - 6:15 PM", location: "D-08-09 | APU CAMPUS", teacherName: "KAMALANATHAN SHANMUGAM", classCode: "UC2F2008IT(IOT)", day: "THU"))
         dataSource.append(Home(name: "CT098-3-2-RMCT-L-1 (Online)", time: "4:00 PM - 6:00 PM", location: "Online 7 |ONL", teacherName: "VEERAKUMAR A/L SOUNDRAPANDIAN", classCode: "UC2F2008IT(IOT)", day: "FRI"))
+        dataSource.append(Home(name: "CT098-3-2-RMCT-L-1 (Online)", time: "4:00 PM - 6:00 PM", location: "Online 7 |ONL", teacherName: "VEERAKUMAR A/L SOUNDRAPANDIAN", classCode: "APU1F2009IT", day: "MON"))
     }
 }
 

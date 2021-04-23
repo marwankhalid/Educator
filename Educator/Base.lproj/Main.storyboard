@@ -82,7 +82,7 @@
                                     <constraint firstItem="L3S-PH-LCq" firstAttribute="leading" secondItem="mEY-Ig-MlY" secondAttribute="trailing" constant="5" id="d3X-RD-qfo"/>
                                     <constraint firstAttribute="bottom" secondItem="mEY-Ig-MlY" secondAttribute="bottom" id="gUg-i0-Ytf"/>
                                     <constraint firstItem="mEY-Ig-MlY" firstAttribute="leading" secondItem="68A-Xg-7pr" secondAttribute="leading" constant="5" id="olu-ss-Bdc"/>
-                                    <constraint firstAttribute="width" constant="130" id="s9q-Ze-hhV"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="s9q-Ze-hhV"/>
                                     <constraint firstAttribute="trailing" secondItem="L3S-PH-LCq" secondAttribute="trailing" constant="5" id="zfv-w6-bYx"/>
                                 </constraints>
                             </view>
@@ -230,6 +230,7 @@
                     <connections>
                         <outlet property="DateDropDown" destination="rvN-tH-46Z" id="dtC-vj-rHm"/>
                         <outlet property="classDropDown" destination="68A-Xg-7pr" id="40i-8D-8hM"/>
+                        <outlet property="classLabel" destination="mEY-Ig-MlY" id="jzz-yF-1uT"/>
                         <outlet property="segmentControl" destination="rJn-j5-8H2" id="2qq-oV-S9O"/>
                         <outlet property="tableView" destination="fOc-Xy-no0" id="a7k-E4-Civ"/>
                     </connections>

