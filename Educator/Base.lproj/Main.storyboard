@@ -25,6 +25,7 @@
                         <segue destination="vAQ-xn-DcC" kind="relationship" relationship="viewControllers" id="sAg-2M-Gkf"/>
                         <segue destination="4Jo-bF-Nco" kind="relationship" relationship="viewControllers" id="2dI-2p-faK"/>
                         <segue destination="Bmv-GU-mEG" kind="relationship" relationship="viewControllers" id="WDQ-7Z-UjG"/>
+                        <segue destination="euB-iv-Qbh" kind="relationship" relationship="viewControllers" id="p4W-Sx-WOf"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5bv-oi-JmX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -738,7 +739,7 @@
         <!--Item-->
         <scene sceneID="65l-e2-SFL">
             <objects>
-                <viewController id="Bmv-GU-mEG" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AttendanceVC" id="Bmv-GU-mEG" customClass="AttendanceVC" customModule="Educator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="czO-6m-7Vg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -809,7 +810,7 @@
                                 <rect key="frame" x="0.0" y="201" width="414" height="612"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="90" id="oIJ-wh-hoC">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AttendenceCell" rowHeight="90" id="oIJ-wh-hoC" customClass="AttendenceCell" customModule="Educator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oIJ-wh-hoC" id="zKK-zS-Ik4">
@@ -838,7 +839,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6RC-EZ-rmx">
                                                     <rect key="frame" x="75" y="59" width="42" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="42" id="97P-6N-D5i"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="97P-6N-D5i"/>
                                                         <constraint firstAttribute="height" constant="21" id="ckQ-Mt-af6"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -849,9 +850,9 @@
                                                     <rect key="frame" x="286" y="59" width="42" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="136-Sq-7zk"/>
-                                                        <constraint firstAttribute="width" constant="42" id="AXl-Nc-SVL"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="AXl-Nc-SVL"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -881,6 +882,13 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="itemClass" destination="Aqv-zt-htW" id="amF-xM-lHp"/>
+                                            <outlet property="itemClassValue" destination="6RC-EZ-rmx" id="RJO-0M-5OW"/>
+                                            <outlet property="itemExam" destination="VzB-V7-apa" id="Jkb-Pf-tQa"/>
+                                            <outlet property="itemExamValue" destination="pgv-c7-4MZ" id="lqL-FI-boT"/>
+                                            <outlet property="itemTitle" destination="bI1-qy-zR7" id="GcQ-YZ-ymg"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -906,15 +914,19 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="ZRa-Hc-qnY"/>
+                    <connections>
+                        <outlet property="attendance" destination="gou-R9-E33" id="xYl-8h-guo"/>
+                        <outlet property="tableView" destination="e43-lV-Tfh" id="lZ6-Ky-joP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aPb-eO-nJo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1219" y="544"/>
         </scene>
-        <!--View Controller-->
+        <!--Item-->
         <scene sceneID="20z-DN-JXQ">
             <objects>
-                <viewController id="euB-iv-Qbh" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CardVC" id="euB-iv-Qbh" customClass="CardVC" customModule="Educator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IRN-G1-I1l">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -982,10 +994,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="u6L-ZG-XRS">
-                                <rect key="frame" x="0.0" y="254.5" width="414" height="607.5"/>
+                                <rect key="frame" x="0.0" y="254.5" width="414" height="558.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="Ziz-3K-vbr">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CardCell" rowHeight="50" id="Ziz-3K-vbr" customClass="CardCell" customModule="Educator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ziz-3K-vbr" id="0qO-xM-66d">
@@ -1010,7 +1022,7 @@
                                                     <rect key="frame" x="65" y="5" width="36" height="17"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="17" id="APu-IN-gbo"/>
-                                                        <constraint firstAttribute="width" constant="36" id="CSZ-DK-a46"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="36" id="CSZ-DK-a46"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1055,6 +1067,12 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="itemDescription" destination="ZQx-lL-0aH" id="PoS-1j-ZE7"/>
+                                            <outlet property="itemImg" destination="2g7-oJ-eYu" id="oz7-nw-Zo9"/>
+                                            <outlet property="itemPrice" destination="L7B-KH-y9f" id="ku3-Nv-6l9"/>
+                                            <outlet property="itemTitle" destination="aIY-nB-nhr" id="UKa-O7-O3V"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -1079,6 +1097,10 @@
                             <constraint firstItem="lHQ-mS-Xb3" firstAttribute="bottom" secondItem="u6L-ZG-XRS" secondAttribute="bottom" id="xXw-yV-GML"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="A0K-Ki-X6V"/>
+                    <connections>
+                        <outlet property="tableView" destination="u6L-ZG-XRS" id="f42-55-UaG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rpp-hv-l7w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
