@@ -162,15 +162,17 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource {
     
     // How many items are in array
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let emptyLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height))
         if self.timetableDataSource.count == 0{
-            let emptyLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height))
             emptyLabel.text = "Select Class"
             emptyLabel.textAlignment = NSTextAlignment.center
             emptyLabel.textColor = UIColor.white
             self.tableView.backgroundView = emptyLabel
             self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+            emptyLabel.isHidden = false
             return 0
         }else {
+            emptyLabel.isHidden = true
             return timetableDataSource.count
         }
         

